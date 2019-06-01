@@ -1,0 +1,33 @@
+<h2 class="text-primary">
+  Agregados
+ </h2>
+ <div class="text-primary" *ngIf="! clientes.length  ">No hay clientes por el momento</div>
+ 
+ <table class="table" [formGroup]="myForm" novalidate >
+     <thead class="thead-dark">
+         
+       <tr>
+         <th scope="col">NOMBRE</th>
+         <th scope="col">AP-PP</th>
+         <th scope="col">AP-MA</th>
+         <th scope="col">EDAD</th>
+         <th scope="col">CORREO</th>
+         <th scope="col">SEXO</th>
+         <th scope="col">ICONO</th>
+       </tr>
+     </thead>
+     <tbody *ngFor="let cliente of clientes">
+       <tr  >
+         
+         <th scope="row">{{cliente.nombre}}</th>
+         <th scope="row">{{cliente.apellidoP}}</th>
+           <th scope="row">{{cliente.apellidoM}}</th>
+               <th scope="row">{{cliente.edad}}</th>
+               <th scope="row">{{cliente.correo}}</th>
+                 <th scope="row">{{cliente.sexo}}</th>
+                 <th scope="row"class="{{cliente.icono}}"></th>
+       </tr>
+       <tr>
+         </tr>
+       </tbody>
+     </table>
